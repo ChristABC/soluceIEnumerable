@@ -10,11 +10,16 @@ namespace WHERE
         {
             // Calcul de la moyenne d'une liste de nombre. 
 
+
             Console.WriteLine("Donner un nombre dont on prendra les valeurs inferieures");
             Console.WriteLine("pour calculer la moyenne. ");
             int n=Convert.ToInt32(Console.ReadLine());
             List<int> integers = new List<int> { 1, 20, 35, 514, 155, 56, 24, 878, 99 ,300};
+
+            //Creation de la liste de nombre inferieur à n
             List<int> integersLowerThanN = integers.Where((x) => x < n).ToList();
+
+            //Calcul de la moyenne
 
             double average = integersLowerThanN.Average();
             Console.WriteLine("La moyenne est : "+average);
